@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฝึกหัด - ออกแบบเทคโนโลยี | Tech Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Prompt:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="quiz.js" defer></script>
+</head>
+
+<body class="quiz-body">
+    <nav class="navbar">
+        <div class="logo">Tech<span class="highlight">Design</span>.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="index.html#education">บทเรียน</a></li>
+            <li><a href="#" class="highlight">แบบฝึกหัด</a></li>
+        </ul>
+    </nav>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>ทดสอบความรู้</h1>
+            <p>เลือกหัวข้อที่ต้องการทดสอบ (10 ข้อ/หัวข้อ)</p>
+
+            <div class="topic-selector">
+                <button class="topic-btn active" onclick="loadQuiz('history')">ประวัติศาสตร์</button>
+                <button class="topic-btn" onclick="loadQuiz('infographic')">Infographics</button>
+                <button class="topic-btn" onclick="loadQuiz('ai-plan')">AI แผนการสอน</button>
+                <button class="topic-btn" onclick="loadQuiz('ai-image')">AI สร้างภาพ</button>
+            </div>
+            <div id="score-area" class="score-display">คะแนนของคุณ: <span id="score">0</span> / 10</div>
+        </div>
+
+        <div id="quiz-content">
+            <!-- Questions will be injected here -->
+        </div>
+
+        <div class="quiz-controls">
+            <button id="reset-btn" class="cta-button" onclick="resetQuiz()">ทำใหม่</button>
+            <a href="index.html" class="cta-button"
+                style="background: transparent; border: 1px solid var(--accent-blue); color: var(--accent-blue);">กลับหน้าหลัก</a>
+        </div>
+    </div>
+</body>
+
+</html>
